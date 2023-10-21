@@ -208,6 +208,16 @@ fieldset legend {
   align-items: center;
 }
 
+.header__skip-link {
+ position: absolute;
+ top: -100px;
+ left: 20px;
+}
+
+.header__skip-link:focus {
+  top: 2px;
+}
+
 .header__logo {
   display: block;
   margin-top: -12px;
