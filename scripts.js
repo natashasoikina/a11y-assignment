@@ -28,10 +28,13 @@ window.addEventListener("DOMContentLoaded", () => {
     accordionTitle.addEventListener('click', () => {
       accordion.classList.toggle('accordion__item_active');
       const title = accordion.querySelector('.accordion__item-title');
+      const body = accordion.querySelector('.accordion__item-body');
       if (accordion.classList.contains('accordion__item_active')) {
         title.setAttribute('aria-expanded', 'true');
+        body.removeAttribute('aria-hidden');
       } else {
-        title.setAttribute('aria-expanded', 'false');   
+        title.setAttribute('aria-expanded', 'false');
+        body.setAttribute('aria-hidden', 'true');
       }
     });    
   });
