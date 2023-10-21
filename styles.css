@@ -867,6 +867,17 @@ font-weight: bold;
   z-index: 0;
 }
 
+.input-radio__label {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+
+}
+
 .input-radio__visual {
   position: relative;
   width: 40px;

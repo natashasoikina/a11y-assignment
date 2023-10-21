@@ -66,8 +66,8 @@
 							<p class="product-card__infolabel">Tax included</p>
 							<form aria-label="Select product" class="product-card__form" action="#">
 								<div class="product-card__parameter">
-									<div class="product-card__label">Size</div>
-									<select class="product-size">
+									<label class="product-card__label" for="product-size">Size</label>
+									<select id="product-size" class="product-size">
 										<option value="xs">XS</option>
 										<option value="s">S</option>
 										<option value="m">M</option>
@@ -112,48 +112,54 @@
 									<ul class="input-group">
 										<li class="input-group__item">
 											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="White" value="white" checked aria-hidden="true">
-												<span class="input-radio__visual input-radio-color">
+												<span class="input-radio__label">White</span>
+												<input class="input-radio__input" type="radio" name="product_color" data-name-display="White" value="white" checked>
+												<span class="input-radio__visual input-radio-color" title="White">
 													<span class="input-radio-color__sample" style="background-color: #ffffff; border: 1px #cccccc solid;"></span>
 												</span>
 											</label>
 										</li>
 										<li class="input-group__item">
 											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Black" value="black" aria-hidden="true">
-												<span class="input-radio__visual input-radio-color">
+												<span class="input-radio__label">Black</span>
+												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Black" value="black">
+												<span class="input-radio__visual input-radio-color" title="Black">
 													<span class="input-radio-color__sample" style="background-color: #1a1f29;"></span>
 												</span>
 											</label>
 										</li>
 										<li class="input-group__item">
 											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Gray" value="gray" aria-hidden="true">
-												<span class="input-radio__visual input-radio-color">
+												<span class="input-radio__label">Gray</span>
+												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Gray" value="gray">
+												<span class="input-radio__visual input-radio-color" title="Gray">
 													<span class="input-radio-color__sample" style="background-color: #aeaeb0;"></span>
 												</span>
 											</label>
 										</li>
 										<li class="input-group__item">
 											<label class="input-radio">
-																								<input class="input-radio__input" type="radio" name="product_color" data-name-display="Purple latte" value="purple">
-												<span class="input-radio__visual input-radio-color">
+												<span class="input-radio__label">Purple latte</span>
+												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Purple latte" value="purple">
+												<span class="input-radio__visual input-radio-color" title="Purple latte">
 													<span class="input-radio-color__sample" style="background-color: #ba9be5;"></span>
 												</span>
 											</label>
 										</li>
 										<li class="input-group__item">
 											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Color 1" value="color1" disabled aria-hidden="true">
-												<span class="input-radio__visual input-radio-color">
+												<span class="input-radio__label">Color 1</span>
+												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Color 1" value="color1" disabled>
+												<span class="input-radio__visual input-radio-color" title="Color 1">
 													<span class="input-radio-color__sample" style="background-color: #e9a0a7;"></span>
 												</span>
 											</label>
 										</li>
 										<li class="input-group__item">
 											<label class="input-radio">
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Color 2" value="color2" disabled aria-hidden="true">
-												<span class="input-radio__visual input-radio-color">
+												<span class="input-radio__label">Color 2</span>
+												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Color 2" value="color2" disabled>
+												<span class="input-radio__visual input-radio-color" title="Color 2">
 													<span class="input-radio-color__sample" style="background-color: #f8cab1;"></span>
 												</span>
 											</label>												
@@ -161,11 +167,11 @@
 									</ul>										
 								</fieldset>
 								<div class="product-card__parameter product-card__parameter_last">
-									<span class="product-card__label">Quantity</span>
+									<label class="product-card__label" for="product-quantity">Quantity</label>
 									<div class="input-quantity">
-										<button class="input-quantity__btn" data-action="decrease">&minus;</button>
-										<input type="number" class="input-quantity__field" id="productQuantity" name="product_quantity" value="1">
-										<button class="input-quantity__btn" data-action="increase">&plus;</button>
+										<button type="button" class="input-quantity__btn" data-action="decrease">&minus;</button>
+										<input type="number" class="input-quantity__field" id="product-quantity" name="product_quantity" value="1">
+										<button type="button" class="input-quantity__btn" data-action="increase">&plus;</button>
 									</div>
 								</div>
 								<button class="btn btn_secondary btn_hollow">Add to cart</button>
@@ -371,15 +377,14 @@
 						</section>
 						<section aria-labelledby="subscribeForm" class="footer__col">
 							<h2 id="subscribeForm" class="footer__heading">Subscribe</h2>
-							<form aria-label="Subscribe" class="form" action="#">
-								<div class="form__input-group">
-									<input class="input" type="email" name="email" id="email" placeholder="Email">
-									<button class="btn btn_primary">Subscribe</button>
-								</div>
-								<div class="form__input-group">
-									<input class="checkbox" type="checkbox" name="agree" id="agree"> I agree to give you all my data
-								</div>
-
+							<form class="form" action="#" aria-label="Subcribe Form">
+								<label for="email">Email</label>
+								<input class="input" type="email" name="email" id="email" placeholder="example@gmail.com" autocomplete="email">
+								<label class="form__input-group">
+									<input class="checkbox" type="checkbox" name="agree" id="agree">
+									I agree to give you all my data
+								</label>
+								<button class="btn btn_primary">Subscribe</button>
 							</form>
 						</section>
 					</div>
