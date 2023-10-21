@@ -31,10 +31,15 @@
   --border-color-primary: #6e6e73;
   --border-color-light: #ccc;
   --brand-blue: #171c8f;
+  --outline-color: rgba(0,125,250,.6);
 }
 
 * {
   box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: 4px solid var(--outline-color);
 }
 
 a {
@@ -64,7 +69,7 @@ body {
   margin: 0;
   font-family: "Avenir Next Rounded Std", sans-serif;
   color: var(--text-color-primary);
-  background-color: #fff;
+  background-color: var(--bg-color-primary);
 }
 
 h1,
@@ -731,6 +736,11 @@ fieldset legend {
   margin-bottom: 40px;
 }
 
+.product-card__link {
+  margin-top: 10px;
+  padding: 10px 0;
+}
+
 .product-size {
   width: 100%;
   max-width: 300px;
@@ -738,9 +748,6 @@ fieldset legend {
 }
 
 .size-guide-link {
-  display: block;
-  margin-top: 10px;
-  padding: 10px 0;
   color: var(--link-color-primary);
   text-decoration: underline;
 }
@@ -946,6 +953,10 @@ fieldset legend {
   padding: 2px;
 }
 
+.input-radio__input:focus-visible + .input-radio-color {
+  outline: 4px solid var(--outline-color);
+}
+
 .input-radio__input:checked + .input-radio-color {
   border: 1px var(--border-color-primary) solid;
   padding: 2px;
@@ -1082,11 +1093,11 @@ fieldset legend {
 }
 
 .products-grid__item-name a:focus-visible {
-  box-shadow: none;
+  outline: none;
 }
 
 .products-grid__item-name a:focus-visible::after {
-  box-shadow: 0 0 0 3px var(--outline-color);
+  outline: 4px solid var(--outline-color);
 }
 
 .products-grid__item-price {
