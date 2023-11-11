@@ -43,21 +43,15 @@ window.addEventListener("DOMContentLoaded", () => {
   modalTarget.forEach((modalTarget)=> {
     modalTarget.addEventListener('click', ()=>{
       const modalWindow = document.querySelector('.modal');
-      showModal(modalWindow);
+      modalWindow.showModal();
     });
   });
-  const modalBackdrop = document.querySelectorAll('.modal-backdrop');
-  modalBackdrop.forEach((modalBackdrop)=> {
-    modalBackdrop.addEventListener('click', (e) => {
 
+  const modalCloseButton = document.querySelectorAll('.modal-close-button');
+  modalCloseButton.forEach((modalCloseButton)=> {
+    modalCloseButton.addEventListener('click', (e) => {
       const modalWindow = e.target.closest('.modal');
-      modalWindow.classList.remove('show-modal');
+      modalWindow.close();
     });
   });
-
-  const showModal = (modalWindow) => {
-    modalWindow.classList.add('show-modal');
-  }
-
-
 })
