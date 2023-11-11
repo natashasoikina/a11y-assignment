@@ -123,7 +123,7 @@
 											<label class="input-radio">
 												<span class="input-radio__label">White</span>
 												<input class="input-radio__input" type="radio" name="product_color" data-name-display="White" value="white" checked>
-												<span class="input-radio__visual input-radio-color" title="White">
+												<span class="input-radio__visual input-radio-color">
 													<span class="input-radio-color__sample" style="background-color: #ffffff; border: 1px #cccccc solid;"></span>
 												</span>
 											</label>
@@ -132,7 +132,7 @@
 											<label class="input-radio">
 												<span class="input-radio__label">Black</span>
 												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Black" value="black">
-												<span class="input-radio__visual input-radio-color" title="Black">
+												<span class="input-radio__visual input-radio-color">
 													<span class="input-radio-color__sample" style="background-color: #1a1f29;"></span>
 												</span>
 											</label>
@@ -141,34 +141,34 @@
 											<label class="input-radio">
 												<span class="input-radio__label">Gray</span>
 												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Gray" value="gray">
-												<span class="input-radio__visual input-radio-color" title="Gray">
+												<span class="input-radio__visual input-radio-color">
 													<span class="input-radio-color__sample" style="background-color: #aeaeb0;"></span>
 												</span>
 											</label>
 										</li>
 										<li class="input-group__item">
 											<label class="input-radio">
-												<span class="input-radio__label">Purple latte</span>
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Purple latte" value="purple">
-												<span class="input-radio__visual input-radio-color" title="Purple latte">
+												<span class="input-radio__label">Purple</span>
+												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Purple" value="purple">
+												<span class="input-radio__visual input-radio-color">
 													<span class="input-radio-color__sample" style="background-color: #ba9be5;"></span>
 												</span>
 											</label>
 										</li>
 										<li class="input-group__item">
 											<label class="input-radio">
-												<span class="input-radio__label">Color 1</span>
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Color 1" value="color1" disabled>
-												<span class="input-radio__visual input-radio-color" title="Color 1">
+												<span class="input-radio__label">Pink</span>
+												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Pink" value="pink" disabled>
+												<span class="input-radio__visual input-radio-color">
 													<span class="input-radio-color__sample" style="background-color: #e9a0a7;"></span>
 												</span>
 											</label>
 										</li>
 										<li class="input-group__item">
 											<label class="input-radio">
-												<span class="input-radio__label">Color 2</span>
-												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Color 2" value="color2" disabled>
-												<span class="input-radio__visual input-radio-color" title="Color 2">
+												<span class="input-radio__label">Orange</span>
+												<input class="input-radio__input" type="radio" name="product_color" data-name-display="Orange" value="orange" disabled>
+												<span class="input-radio__visual input-radio-color">
 													<span class="input-radio-color__sample" style="background-color: #f8cab1;"></span>
 												</span>
 											</label>												
@@ -178,9 +178,9 @@
 								<div class="product-card__parameter product-card__parameter_last">
 									<label class="product-card__label" for="product-quantity">Quantity</label>
 									<div class="input-quantity">
-										<button type="button" class="input-quantity__btn" data-action="decrease">&minus;</button>
+										<button aria-label="Decrease quantity" type="button" class="input-quantity__btn" data-action="decrease">&minus;</button>
 										<input type="number" class="input-quantity__field" id="product-quantity" name="product_quantity" value="1">
-										<button type="button" class="input-quantity__btn" data-action="increase">&plus;</button>
+										<button aria-label="Increase quantity" type="button" class="input-quantity__btn" data-action="increase">&plus;</button>
 									</div>
 								</div>
 								<button class="btn btn_secondary btn_hollow">Add to cart</button>
