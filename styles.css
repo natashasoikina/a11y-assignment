@@ -217,11 +217,11 @@ fieldset legend {
 }
 
 .header__skip-link {
- position: absolute;
- top: -100px;
- left: 20px;
- color: var(--link-color-primary);
- text-decoration: underline;
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  color: var(--link-color-primary);
+  text-decoration: underline;
 }
 
 .header__skip-link:focus {
@@ -235,6 +235,7 @@ fieldset legend {
   margin-right: 60px;
   max-width: 139px;
   flex-shrink: 0;
+  order: 2;
 }
 
 .header__logo-picture {
@@ -243,7 +244,11 @@ fieldset legend {
 }
 
 .header__menu-main {
-  width: 100%;
+  order: 1;
+}
+
+.header__menu-secondary {
+  order: 3;
 }
 
 .menu {

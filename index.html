@@ -10,11 +10,13 @@
 	<body>
 		<div class="main-grid">
 			<header class="header">
+				<a class="header__skip-link" href="#skipLinkTarget">Skip to main content</a>
+
 				<div class="container header__container">
-					<a class="header__skip-link" href="#skipLinkTarget">Skip to main content</a>
 					<a class="header__logo" href="/">
 						<img class="header__logo-picture" src="images/logo.svg" alt="Susparsa">
 					</a>
+
 					<nav aria-label="Primary" class="header__menu-main">
 						<ul class="menu">
 							<li class="menu__item">
@@ -29,7 +31,12 @@
 							<li class="menu__item">
 								<a class="menu__link" href="#">Company</a>
 							</li>
-														<li class="menu__item">
+						</ul>
+					</nav>
+
+					<nav aria-label="Account, Search and Cart" class="header__menu-secondary">	
+						<ul class="menu">
+							<li class="menu__item">
 								<a class="menu__link" href="#">Account</a>
 							</li>
 							<li class="menu__item">
