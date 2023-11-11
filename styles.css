@@ -1167,3 +1167,35 @@ fieldset legend {
   margin-right: 4px;
   margin-bottom: 8px;
 }
+
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 10px;
+}
+
+.subscribe-form__label {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.subscribe-form__input {
+  flex-grow: 1;
+  width: calc(100% / 2 - (10px * 1 / 2));
+}
+
+.subscribe-form__button {
+  flex-grow: 1;
+  min-width: 120px;
+  width: calc(100% / 2 - (10px * 1 / 2));
+}
+
+.subscribe-form__checkbox {
+  flex-basis: 100%;
+  order: 3;
+}
