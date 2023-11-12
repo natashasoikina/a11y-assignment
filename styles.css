@@ -911,21 +911,36 @@ fieldset legend {
 }
 
 .input-radio__label {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  position: absolute;
+  z-index: 2;
+  width: 1px;
   height: 1px;
   overflow: hidden;
-  position: absolute;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  left: calc(100% - 12px);
+  bottom: calc(100% - 12px);
+  padding: 2px;
+  background: var(--bg-color-primary);
+  border: 1px solid var(--border-color-light);
+  color: var(--text-color-light);
   white-space: nowrap;
-  width: 1px;
+}
 
+.input-radio:hover .input-radio__label,
+.input-radio:focus-within .input-radio__label {
+  width: auto;
+  height: auto;
+  overflow: auto;
+  clip: auto;
+  clip-path: none;
 }
 
 .input-radio__visual {
   position: relative;
   width: 40px;
   height: 40px;
-  z-index: 5;
+  z-index: 1;
   display: inline-flex;
   cursor: pointer;
   overflow: hidden;
